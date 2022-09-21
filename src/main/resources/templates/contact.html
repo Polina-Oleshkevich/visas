@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <header th:insert="visas/header :: header"></header>
+    </div>
+    <div class="container mt-5">
+
+        <h2>Контакты:</h2>
+        <p>Адрес:</p>
+        <p>350000, г. Краснодар, ул. Красная, д. 155, офис 607 </p>
+        <br>
+        <p>Телефон:</p>
+        <p>+7-989-800-50-07</p>
+        <p>+7-918-162-40-70</p>
+        <br>
+        <p>E-mail:</p>
+        <p>polina.visa@mail.ru</p>
+        <br>
+        <p>Чат:</p>
+        <p><a href="/https://t.me/MyVisaForYouChat"></a></p>
+    </div>
+<div th:insert="visas/footer :: footer"></div>
+</body>
+</html>

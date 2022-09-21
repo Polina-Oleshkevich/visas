@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title th:text="${title}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <header th:insert="visas/header :: header"></header>
+</div>
+
+<main>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card-header py-3 text-bg-primary border-primary">
+                    <h4 class="my-0 fw-normal">Краткосрочный шенген</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">7000<small class="text-muted fw-light">/под ключ</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>запись на подачу документов</li>
+                        <li>анкета</li>
+                        <li>бронь билетов, отеля</li>
+                        <li>сопроводительное письмо</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card-header py-3 text-bg-primary border-primary">
+                    <h4 class="my-0 fw-normal">Долгосрочный шенген</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">10 000<small class="text-muted fw-light">/под ключ</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>запись на подачу документов</li>
+                        <li>анкета</li>
+                        <li>бронь билетов, отеля</li>
+                        <li>сопроводительное письмо</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card-header py-3 text-bg-primary border-primary">
+                    <h4 class="my-0 fw-normal">Виза в США</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">20 000<small class="text-muted fw-light">/под ключ</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>анкета</li>
+                        <li>подтверждение</li>
+                        <li>запись на собеседование через бот</li>
+                        <li>пробное интервью</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card-header py-3 text-bg-primary border-primary">
+                    <h4 class="my-0 fw-normal">Виза в Японию</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">10 000<small class="text-muted fw-light">/под ключ</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>консультация</li>
+                        <li>электронная анкета</li>
+                        <li>подбор тура</li>
+                        <li>подбор билетов</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card-header py-3 text-bg-primary border-primary">
+                    <h4 class="my-0 fw-normal">Виза в Канаду</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">20 000<small class="text-muted fw-light">/под ключ</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>консультация</li>
+                        <li>запись на биометрию</li>
+                        <li>электронная анкета</li>
+                        <li>полное сопровождение</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card-header py-3 text-bg-primary border-primary">
+                    <h4 class="my-0 fw-normal">Запись</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">3000<small class="text-muted fw-light">/для шенгена</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>консультация</li>
+                        <li>запись на биометрию</li>
+                        <li>проверка анкеты (при необходимости)</li>
+                        <li>проверка сопроводительного (при необходимости)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card-header py-3 text-bg-primary border-primary">
+                    <h4 class="my-0 fw-normal">Запись через бот</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">15 000<small class="text-muted fw-light">/США</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>консультация</li>
+                        <li>подключение к боту</li>
+                        <li>запись через бот</li>
+                        <li>проверка анкеты (при необходимости)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<div th:insert="visas/footer :: footer"></div>
+</body>
+</html>
+
+</main>
+<div th:insert="visas/footer :: footer"></div>
+</body>
+</html>
