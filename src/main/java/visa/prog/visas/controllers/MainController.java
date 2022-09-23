@@ -13,6 +13,7 @@ public class MainController {
         model.addAttribute("title", "Главная страница");
         return "home";
     }
+
     @GetMapping("/account")
     public String account(Model model) {
         model.addAttribute("title", "Личный кабинет");
@@ -33,11 +34,7 @@ public class MainController {
         model.addAttribute("title", "Заявки");
         return "start";
     }
-    @GetMapping("/info")
-    public String info(Model model) {
-        model.addAttribute("title", "Подробнее...");
-        return "info";
-    }
+
     @GetMapping("/registration")
     public String registration(Model model) {
         model.addAttribute("title", "Регистрация");
