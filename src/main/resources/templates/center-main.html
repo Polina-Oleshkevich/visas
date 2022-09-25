@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Визовые центры</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <header th:insert="visas/header :: header"></header>
+
+</div>
+<div class="container mt-5">
+    <h2>Визовые центры</h2>
+    <div th:each="el : ${centers}" class="alert alert-info mt-2">
+        <p th:text="${el.address}"></p>
+        <p th:text="${el.phone}"></p>
+        <a th:href="'/center/' + ${el.id}" class="btn btn-warning">Детальнее</a>
+    </div>
+</div>
+<div th:insert="visas/footer :: footer"></div>
+</body>
+</html>

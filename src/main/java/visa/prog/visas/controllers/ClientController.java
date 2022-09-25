@@ -1,7 +1,6 @@
 package visa.prog.visas.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -31,10 +30,10 @@ public class ClientController {
 
         @PostMapping("/client/add")
         public String clientAdd(@RequestParam String firstName,
-                                @RequestParam String lastName, @RequestParam LocalDate dateBirst,
+                                @RequestParam String lastName, @RequestParam LocalDate dateBirth,
                                 @RequestParam String address, @RequestParam String phone,
                                 @RequestParam String email, @RequestParam String documents, Model model) {
-            Client client = new Client(firstName, lastName, dateBirst, address, phone, email, documents);
+            Client client = new Client(firstName, lastName, dateBirth, address, phone, email, documents);
             clientRepository.save(client);
             return "redirect:/client";
         }
@@ -63,13 +62,13 @@ public class ClientController {
         }
         @PostMapping("/client/{id}/edit")
         public String clientUpdate(@PathVariable(value = "id") long id, @RequestParam String firstName,
-                                   @RequestParam String lastName, @RequestParam LocalDate dateBirst,
+                                   @RequestParam String lastName, @RequestParam LocalDate dateBirth,
                                    @RequestParam String address, @RequestParam String phone,
                                    @RequestParam String email, @RequestParam String documents, Model model) {
             Client client = clientRepository.findById(id).orElseThrow(RuntimeException::new);
             client.setFirstName(firstName);
             client.setLastName(lastName);
-            client.setDateBirst(dateBirst);
+            client.setDateBirth(dateBirth);
             client.setAddress(address);
             client. setPhone(phone);
             client.setEmail(email);
@@ -85,7 +84,6 @@ public class ClientController {
 
             return "redirect:/client";
         }
-
 }
 
 

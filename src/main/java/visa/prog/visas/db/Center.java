@@ -1,28 +1,25 @@
 package visa.prog.visas.db;
 
-import javax.persistence.*;
-import java.time.LocalDate;
-@Entity
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-public class Client {
+@Entity
+public class Center {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long id;
-    private String firstName;
-    private String lastName;
-    private LocalDate dateBirth;
     private String address;
     private String phone;
     private String email;
     private String documents;
 
-    public Client() {
+    public Center() {
     }
 
-    public Client(String firstName, String lastName, LocalDate dateBirth, String address, String phone, String email, String documents) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.dateBirth = dateBirth;
+    public Center(String address, String phone, String email, String documents) {
         this.address = address;
         this.phone = phone;
         this.email = email;
@@ -35,30 +32,6 @@ public class Client {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public LocalDate getDateBirth() {
-        return dateBirth;
-    }
-
-    public void setDateBirth(LocalDate dateBirth) {
-        this.dateBirth = dateBirth;
     }
 
     public String getAddress() {

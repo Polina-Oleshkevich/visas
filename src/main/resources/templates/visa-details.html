@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Визы</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <header th:insert="visas/header :: header"></header>
+</div>
+
+<div class="container mt-5">
+    <div th:each="el : ${visa}" class="alert alert-info mt-2">
+        <p th:text="${el.visaType}"></p>
+        <p th:text="${el.visaTerm}"></p>
+        <p th:text="${el.purpose}"></p>
+        <p th:text="${el.country}"></p>
+        <p th:text="${el.price}"></p>
+        <a th:href="'/visa/' + ${el.id} + '/edit'" class="btn btn-warning">Редактировать</a><br><br>
+        <form th:action="'/visa/' + ${el.id} + '/remove'" method="post">
+            <button class="btn btn-warning" type="submit">Удалить</button>
+        </form>
+    </div>
+</div>
+<div th:insert="visas/footer :: footer"></div>
+</div>
+</body>
+</html>

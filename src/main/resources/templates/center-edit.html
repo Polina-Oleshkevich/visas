@@ -12,11 +12,8 @@
 </div>
 <div class="container mt-5 mb-5">
     <h2>Редактировать</h2>
-    <div th:each="el : ${client}">
+    <div th:each="el : ${center}">
         <form method="post">
-            <input type="text" th:value="${el.firstName}" name="firstName" placeholder="Введите имя" class="form-control"><br>
-            <input type="text" th:value="${el.lastName}" name="lastName" placeholder="Введите фамилию" class="form-control"><br>
-            <input type="date" th:value="${el.dateBirth}" name="dateBirth" placeholder="Введите дату рождения" class="form-control"><br>
             <input type="text" th:value="${el.address}" name="address" placeholder="Введите адрес" class="form-control"><br>
             <input type="text" th:value="${el.phone}" name="phone" placeholder="Введите телефон" class="form-control"><br>
             <input type="email" th:value="${el.email}" name="email" placeholder="Введите email" class="form-control"><br>
